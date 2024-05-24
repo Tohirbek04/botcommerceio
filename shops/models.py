@@ -4,6 +4,9 @@ from django.db import models
 class BaseModel(models.Model):
     name = models.CharField(max_length=50)
 
+    class Meta:
+        abstract = True
+
 
 class ShopModel(BaseModel):
     user = models.ForeignKey('users.User', models.CASCADE)
@@ -20,5 +23,3 @@ class ProductModel(BaseModel):
 
 class ProductImageModel(BaseModel):
     image = models.ImageField(upload_to='products')
-
-
