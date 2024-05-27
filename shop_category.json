@@ -1,0 +1,24 @@
+[
+  {
+    "model": "categories.CategoryModel",
+    "pk": 1,
+    "fields": {
+      "name": "Electronics",
+      "emoji": "📱",
+      "image": null,
+      "description": "Category for electronic devices",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "categories.CategoryModel",
+    "pk": 2,
+    "fields": {
+      "name": "Clothing",
+      "emoji": "👕",
+      "image": null,
+      "description": "Category for clothing items",
+      "sort_order": 0
+    }
+  }
+]
