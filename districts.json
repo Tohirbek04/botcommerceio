@@ -1,0 +1,43 @@
+[
+  {
+    "model": "shops.district",
+    "pk": 1,
+    "fields": {
+      "name": "Chiroqchi",
+      "region": 1
+    }
+  },
+  {
+    "model": "shops.district",
+    "pk": 2,
+    "fields": {
+      "name": "Qarshi",
+      "region": 1
+    }
+  },
+  {
+    "model": "shops.district",
+    "pk": 3,
+    "fields": {
+      "name": "Muborak",
+      "region": 1
+    }
+  },
+  {
+    "model": "shops.district",
+    "pk": 4,
+    "fields": {
+      "name": "Koson",
+      "region": 1
+    }
+  },
+  {
+    "model": "shops.district",
+    "pk": 5,
+    "fields": {
+      "name": "Qamashi",
+      "region": 1
+    }
+  }
+]
+

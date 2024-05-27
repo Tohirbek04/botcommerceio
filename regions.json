@@ -1,0 +1,17 @@
+[
+  {
+    "model": "shops.region",
+    "pk": 1,
+    "fields": {
+      "name": "Qashqadaryo"
+    }
+  },
+   {
+    "model": "shops.region",
+     "pk": 2,
+    "fields": {
+      "name": "Samarqand"
+    }
+  }
+]
+

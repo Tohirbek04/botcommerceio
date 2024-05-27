@@ -1,3 +1,6 @@
+import uuid
+
+from django.contrib.postgres.functions import RandomUUID
 from django.db import models
 
 
@@ -23,3 +26,29 @@ class ProductModel(BaseModel):
 
 class ProductImageModel(BaseModel):
     image = models.ImageField(upload_to='products')
+
+
+class RDBaseModel(models.Model):
+    name = models.CharField(max_length=50)
+
+    class Meta:
+        abstract = True
+
+    def __str__(self):
+        return self.name
+
+
+class Region(RDBaseModel):
+    class Meta:
+        verbose_name = 'Region'
+        verbose_name_plural = 'Regions'
+
+    def __str__(self):
+        return self.name
+
+
+class District(RDBaseModel):
+    region = models.ForeignKey('shops.Region', on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name_plural = 'Districts'
