@@ -1,6 +1,5 @@
 import uuid
 
-from django.contrib.postgres.functions import RandomUUID
 from django.db import models
 
 
@@ -20,12 +19,16 @@ class CategoryModel(BaseModel):
 
 
 class ProductModel(BaseModel):
+    uuid = models.UUIDField(db_default=uuid.uuid4, editable=False, unique=True)
     price = models.FloatField(db_default=0.0)
     count = models.IntegerField(db_default=0)
+    image = models.ImageField(upload_to='products/%Y/%m/%d')
 
 
 class ProductImageModel(BaseModel):
+    uuid = models.UUIDField(db_default=uuid.uuid4, editable=False, unique=True)
     image = models.ImageField(upload_to='products')
+    product = models.ForeignKey('shops.ProductModel', on_delete=models.CASCADE)
 
 
 class RDBaseModel(models.Model):
